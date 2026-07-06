@@ -12,6 +12,21 @@ export const metadata: Metadata = {
   title: "Cybersecurity Services — MDR, Pen Testing, GRC & IAM",
   description:
     "Managed detection & response, penetration testing, GRC & compliance, identity management, and security staffing. KOV keeps your systems secure, compliant, and resilient.",
+  alternates: { canonical: "/services/cybersecurity/" },
+  openGraph: {
+    title: "Cybersecurity Services — MDR, Pen Testing, GRC & IAM",
+    description:
+      "24/7 detection & response, offensive testing, compliance, IAM, and security staffing from KOV Technologies.",
+    url: "/services/cybersecurity/",
+    type: "website",
+    images: [{ url: "/og/cybersecurity.png", width: 1200, height: 630, alt: "KOV Cybersecurity Services" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cybersecurity Services — KOV Technologies",
+    description: "24/7 detection & response, offensive testing, compliance, IAM, and security staffing.",
+    images: ["/og/cybersecurity.png"],
+  },
 };
 
 const CAPABILITIES = [
