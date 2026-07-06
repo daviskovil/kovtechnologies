@@ -34,6 +34,11 @@ export type ServiceDetail = {
   faqs: Faq[];
   related: Related[];
   cta: { title: string; subtitle: string };
+  /** Optional overrides so the template also fits product/procurement pages. */
+  ctaLabel?: string;
+  overviewHeading?: string;
+  capabilitiesTitle?: string;
+  capabilitiesIntro?: string;
 };
 
 export const SERVICES: ServiceDetail[] = [

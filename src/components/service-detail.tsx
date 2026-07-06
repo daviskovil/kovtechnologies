@@ -71,7 +71,7 @@ export function ServiceDetail({ service: s, base = DEFAULT_BASE }: { service: Se
             <h1 className="text-4xl font-extrabold leading-tight text-cobalt sm:text-5xl">{s.title}</h1>
             <p className="mt-6 text-lg leading-relaxed text-slate">{s.tagline}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/contact/" variant="cta" withArrow>Book a Call</Button>
+              <Button href="/contact/" variant="cta" withArrow>{s.ctaLabel ?? "Book a Call"}</Button>
               <Button href={base.href} variant="outline">All {base.label}</Button>
             </div>
           </div>
@@ -95,7 +95,9 @@ export function ServiceDetail({ service: s, base = DEFAULT_BASE }: { service: Se
             <span className="eyebrow mb-4">
               <span className="h-1.5 w-1.5 rounded-full bg-flame" /> Overview
             </span>
-            <h2 className="text-2xl font-bold text-cobalt sm:text-3xl">What are {s.title.toLowerCase()}?</h2>
+            <h2 className="text-2xl font-bold text-cobalt sm:text-3xl">
+              {s.overviewHeading ?? `What are ${s.title.toLowerCase()}?`}
+            </h2>
 
             <div className="mt-6 rounded-2xl border border-cobalt/10 bg-mist p-6">
               <div className="mb-2 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-flame">
@@ -132,8 +134,8 @@ export function ServiceDetail({ service: s, base = DEFAULT_BASE }: { service: Se
         <Container>
           <SectionHeading
             eyebrow="What's included"
-            title="Capabilities"
-            intro={`Everything you get with KOV ${s.title.toLowerCase()} — delivered as one accountable service.`}
+            title={s.capabilitiesTitle ?? "Capabilities"}
+            intro={s.capabilitiesIntro ?? `Everything you get with KOV ${s.title.toLowerCase()} — delivered as one accountable service.`}
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {s.capabilities.map((c) => {
@@ -289,7 +291,7 @@ export function ServiceDetail({ service: s, base = DEFAULT_BASE }: { service: Se
         </section>
       )}
 
-      <CtaBand title={s.cta.title} subtitle={s.cta.subtitle} cta="Book a Call" />
+      <CtaBand title={s.cta.title} subtitle={s.cta.subtitle} cta={s.ctaLabel ?? "Book a Call"} />
     </>
   );
 }
