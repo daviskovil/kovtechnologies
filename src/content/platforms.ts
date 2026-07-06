@@ -39,7 +39,7 @@ export const PLATFORMS: ServiceDetail[] = [
       { title: "Finance & Controlling", desc: "FICO configuration, close, and reporting.", icon: Banknote, href: "/platform-services/sap-finance-and-controlling/" },
       { title: "Materials Management", desc: "MM procurement, inventory, and valuation.", icon: Package, href: "/platform-services/sap-materials-management/" },
       { title: "Supply Chain (EWM)", desc: "Extended Warehouse Management and logistics.", icon: Truck, href: "/platform-services/sap-extended-warehouse-management/" },
-      { title: "Basis & Technical", desc: "Installation, upgrades, and system administration.", icon: Server, href: "/platform-services/sap-hybris/" },
+      { title: "SAP Hybris (Commerce)", desc: "B2B and B2C enterprise commerce on SAP.", icon: Server, href: "/platform-services/sap-hybris/" },
       { title: "SAP Staffing", desc: "Contract, permanent, and flexi SAP resourcing.", icon: UserCog, href: "/platform-services/sap-contract-staffing/" },
     ],
     compare: {

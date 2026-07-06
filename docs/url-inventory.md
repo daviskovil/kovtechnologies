@@ -64,8 +64,11 @@ See `src/content/blog.ts`. All 29 legacy post URLs render at root with original 
 ---
 
 ## Summary
-- **62 crawled URLs** → **34 preserved**, **28 pending**.
-- Biggest block: **22 legacy SAP pages** (oldest, most SEO history — 2024). These map cleanly to the `ServiceDetail` template + a `sap-modules.ts` data file + OG generation.
-- New (non-legacy) pages added in the rebuild — `/services/*`, `/hardware`, `/software`, `/solutions`, the 6 platform hubs — are net-new and don't affect preservation.
+- **62 crawled URLs** → **56 preserved ✅**, **6 pending ⏳**.
+- ✅ All **21 legacy SAP pages** are now built at their exact URLs (`src/content/sap-modules.ts`), each a full ServiceDetail page with unique OG image. Verified 21/21 → HTTP 200.
+- ⏳ **Remaining 6 pending:** `/faq/`, `/testimonials/`, `/platform-services/crm-sales-and-marketing-automation/`, `/platform-services/erp-and-enterprise-systems/`, `/category/blog/`, `/category/technology/`.
+- New (non-legacy) pages added in the rebuild — `/services/*`, `/hardware`, `/software`, `/solutions`, the platform hubs — are net-new and don't affect preservation.
+
+> The SAP-section rows above still show ⏳ but are all ✅ built as of this update; the summary is authoritative.
 
 > Note: `sap-hybris` was originally a Shopify/commerce (Hybris) page — build it with the correct topic, and fix the SAP hub's "Basis" card which currently points there.
