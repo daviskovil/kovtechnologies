@@ -454,6 +454,80 @@ export const PLATFORMS: ServiceDetail[] = [
       subtitle: "Book a call with a certified ServiceNow specialist to scope your platform roadmap.",
     },
   },
+
+  // ─────────────────────────────────────────────────────────── Shopify
+  {
+    slug: "shopify-back-office-support",
+    category: "Platform Services",
+    eyebrow: "Platform Service",
+    title: "Shopify Services",
+    seoTitle: "Shopify Services — Store Setup, Back-Office Support & Optimization",
+    metaDescription:
+      "KOV Shopify services: store setup and migration, storefront development, back-office and order management, app integration, and ongoing support. Book a call.",
+    tagline:
+      "Launch, run, and scale your Shopify store — from storefront builds and migration to back-office order management and day-to-day support.",
+    answer:
+      "Shopify services cover the setup, customization, integration, and ongoing back-office support of Shopify and Shopify Plus stores — including storefront development, order and inventory management, app integration, and optimization.",
+    overview: [
+      "A great Shopify store is only half the job — the other half is running it: processing orders, managing inventory, handling returns, and keeping everything integrated with your finance and fulfilment systems. KOV covers both, from storefront build to the back-office operations that keep the store humming.",
+      "Whether you're launching your first store, migrating from another platform, moving up to Shopify Plus, or simply need a reliable team to handle day-to-day back-office support, we bring the e-commerce expertise and offshore delivery capacity to make it seamless.",
+    ],
+    stats: [
+      { value: "Shopify + Plus", label: "Full platform coverage" },
+      { value: "Back office", label: "Order & catalog management" },
+      { value: "Offshore", label: "Cost-efficient delivery" },
+      { value: "24/7", label: "Support option" },
+    ],
+    capabilities: [
+      { title: "Store Setup & Migration", desc: "New store builds and migrations from other e-commerce platforms.", icon: ShoppingCart },
+      { title: "Storefront & Theme Development", desc: "Custom themes and on-brand, high-converting storefronts.", icon: LayoutGrid },
+      { title: "Back Office & Order Management", desc: "Order processing, catalog, inventory, and returns handling.", icon: Package },
+      { title: "App & Systems Integration", desc: "Integrations with ERP, payments, shipping, and marketing tools.", icon: Webhook },
+      { title: "Shopify Plus", desc: "Enterprise Shopify Plus builds, automation, and scaling.", icon: Boxes },
+      { title: "Support & Optimization", desc: "Ongoing support, CRO, and performance optimization.", icon: Headset },
+    ],
+    compare: {
+      title: "Freelancer / DIY vs KOV Shopify practice",
+      withLabel: "KOV Shopify Practice",
+      withoutLabel: "Freelancer / DIY",
+      rows: [
+        { aspect: "Scope", kov: "Storefront + back office", other: "Build only" },
+        { aspect: "Capacity", kov: "Managed offshore team", other: "One person, limited hours" },
+        { aspect: "Integration", kov: "ERP, payments, fulfilment", other: "Manual, disconnected" },
+        { aspect: "Reliability", kov: "SLA-backed support", other: "Best effort" },
+        { aspect: "Scaling", kov: "Ready for Shopify Plus", other: "Outgrows quickly" },
+      ],
+    },
+    process: [
+      { title: "Plan", desc: "We scope your store, catalog, and back-office needs." },
+      { title: "Build & migrate", desc: "We build the storefront and migrate products and data." },
+      { title: "Integrate", desc: "We connect payments, shipping, ERP, and marketing tools." },
+      { title: "Run & optimize", desc: "We handle back-office operations and optimize conversion." },
+    ],
+    useCases: [
+      "Launching a new Shopify store",
+      "Migrating from another e-commerce platform to Shopify",
+      "Outsourcing day-to-day back-office and order management",
+      "Upgrading to Shopify Plus and automating operations",
+      "Improving store performance and conversion rate",
+    ],
+    faqs: [
+      { q: "What Shopify services does KOV provide?", a: "We cover store setup and migration, storefront and theme development, back-office and order management, app and systems integration, Shopify Plus, and ongoing support and optimization." },
+      { q: "Do you handle back-office operations, not just the build?", a: "Yes. Back-office support — order processing, catalog and inventory management, and returns — is a core part of what we do, freeing your team to focus on growth." },
+      { q: "Can you migrate our store from another platform?", a: "Yes. We migrate storefronts, products, customers, and order history from other e-commerce platforms to Shopify with minimal disruption." },
+      { q: "Do you work with Shopify Plus?", a: "Yes. We build and support enterprise Shopify Plus stores, including automation, integrations, and scaling for high-volume merchants." },
+      { q: "Can you integrate Shopify with our other systems?", a: "Yes. We integrate Shopify with ERP, payment, shipping, and marketing systems so orders and data flow cleanly across your operations." },
+    ],
+    related: [
+      { title: "Salesforce Services", href: "/platform-services/salesforce/" },
+      { title: "Application Services", href: "/services/application-services/" },
+      { title: "Procurement & Renewals", href: "/services/procurement/" },
+    ],
+    cta: {
+      title: "Ready to grow your Shopify store?",
+      subtitle: "Book a call to scope your store build, migration, or back-office support.",
+    },
+  },
 ];
 
 export function getPlatform(slug: string): ServiceDetail | undefined {

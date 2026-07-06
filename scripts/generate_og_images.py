@@ -48,6 +48,8 @@ SERVICES = [
      "Finance, Supply Chain, Sales and Business Central"),
     ("servicenow", "PLATFORM SERVICE", "ServiceNow Services",
      "ITSM, ITOM, HR Service Delivery and SecOps"),
+    ("shopify-back-office-support", "PLATFORM SERVICE", "Shopify Services",
+     "Store setup, back-office support and optimization"),
 ]
 
 
