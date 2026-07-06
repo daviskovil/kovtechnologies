@@ -73,6 +73,11 @@ SERVICES = [
     ("sap-contract-staffing", "SAP STAFFING", "SAP Contract Staffing", "Certified SAP contractors, fast"),
     ("crm-sales-and-marketing-automation", "PLATFORM SERVICE", "CRM & Marketing Automation", "Unify sales and marketing on one platform"),
     ("erp-and-enterprise-systems", "PLATFORM SERVICE", "ERP & Enterprise Systems", "SAP, Oracle, Dynamics and NetSuite"),
+    ("ai-data", "SOLUTION", "AI & Data", "Generative AI, analytics and data engineering"),
+    ("cloud-infrastructure", "SOLUTION", "Cloud & Infrastructure", "Migration, DevOps, Kubernetes and FinOps"),
+    ("digital-enablement", "SOLUTION", "Digital Enablement", "App modernization, low-code and integration"),
+    ("workplace-modernization", "SOLUTION", "Workplace Modernization", "Microsoft 365, endpoints and collaboration"),
+    ("security-continuity", "SOLUTION", "Security & Continuity", "Zero trust, disaster recovery and compliance"),
 ]
 
 
