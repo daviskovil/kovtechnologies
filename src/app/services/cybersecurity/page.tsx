@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/section";
 import { CtaBand } from "@/components/cta-band";
 import {
-  ShieldCheck, Radar, Bug, ScrollText, KeyRound, UserCog, ArrowRight, Check,
+  Radar, Swords, ClipboardCheck, Fingerprint, UserCog, Briefcase, Code2, Siren,
+  CloudCog, GraduationCap, Lock, Eye, ArrowRight, Check,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -14,12 +15,18 @@ export const metadata: Metadata = {
 };
 
 const CAPABILITIES = [
-  { icon: Radar, title: "Managed Detection & Response", desc: "24/7 SOC monitoring, threat hunting, and rapid incident response across your estate." },
-  { icon: Bug, title: "Penetration Testing", desc: "Network, application, and cloud assessments that find weaknesses before attackers do." },
-  { icon: ScrollText, title: "GRC & Compliance", desc: "Readiness and audit support for ISO 27001, SOC 2, GDPR, HIPAA, and PCI-DSS." },
-  { icon: KeyRound, title: "Identity & Access", desc: "Zero-trust IAM, SSO, MFA, and privileged access management done right." },
-  { icon: UserCog, title: "Security Staffing", desc: "Vetted security engineers and analysts embedded into your team, on demand." },
-  { icon: ShieldCheck, title: "Security Advisory", desc: "vCISO guidance, architecture reviews, and a pragmatic roadmap to maturity." },
+  { icon: Radar, title: "Managed Detection & Response (MDR)", desc: "24/7/365 Next-Gen SOC monitoring, proactive threat hunting, and rapid incident isolation across your entire digital estate." },
+  { icon: Swords, title: "VAPT & Offensive Security", desc: "Deep-dive vulnerability assessments, advanced penetration testing, and Red Team simulations to breach and harden defenses." },
+  { icon: ClipboardCheck, title: "GRC & Enterprise Compliance", desc: "Continuous compliance architecture and turnkey audit support for global mandates including ISO 27001, SOC 2, HIPAA, and PCI-DSS." },
+  { icon: Fingerprint, title: "Zero-Trust Identity & Access", desc: "Enterprise-grade IAM leveraging frictionless SSO, biometric MFA, and privileged access safeguards." },
+  { icon: UserCog, title: "Security Staffing", desc: "Elite, heavily vetted cyber security engineers, architects, and analysts embedded directly into your internal teams on demand." },
+  { icon: Briefcase, title: "Executive Security Advisory", desc: "Strategic vCISO leadership, secure enterprise architecture blueprinting, and pragmatic roadmaps built for business maturity." },
+  { icon: Code2, title: "Secure Code Review & DevSecOps", desc: "Advanced source code analysis (SAST/DAST) and API protection to neutralize critical software flaws before deployment." },
+  { icon: Siren, title: "Incident Response & Forensics", desc: "Immediate elite deployment for active breach containment, ransomware mitigation, and deep cryptographic digital forensics." },
+  { icon: CloudCog, title: "Cloud & Infrastructure Protection", desc: "Structural configuration hardening, posture management, and perimeter defense across AWS, Azure, GCP, and hybrid-cloud estates." },
+  { icon: GraduationCap, title: "Security Culture & Human Risk", desc: "Mitigating the human attack surface with hyper-targeted phishing simulations and data-driven security awareness coaching." },
+  { icon: Lock, title: "Data Protection & Encryption", desc: "Data loss prevention, classification, and end-to-end encryption safeguarding sensitive data at rest and in transit." },
+  { icon: Eye, title: "Threat Intelligence & Brand Protection", desc: "Proactive threat intelligence, dark-web monitoring, and takedown of impersonation and brand-abuse campaigns." },
 ];
 
 const STEPS = [
@@ -75,7 +82,7 @@ export default function CybersecurityPage() {
           <SectionHeading
             eyebrow="What we do"
             title="A complete security practice"
-            intro="From round-the-clock monitoring to compliance and talent, we cover the full lifecycle of enterprise security."
+            intro="Twelve capabilities spanning the full security lifecycle — from offensive testing and 24/7 defense to compliance, cloud protection, and human risk."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {CAPABILITIES.map((c) => (
