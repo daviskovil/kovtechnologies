@@ -2,7 +2,7 @@ import {
   Boxes, Users, ShoppingCart, LayoutGrid, Banknote, Package, Truck, Server,
   UserCog, Database, Cloud, BarChart3, ReceiptText, Webhook, PieChart,
   TrendingUp, Headset, Megaphone, Calculator, Workflow, LifeBuoy, Network,
-  ShieldCheck, Code2,
+  ShieldCheck, Code2, RefreshCw,
 } from "lucide-react";
 import type { ServiceDetail } from "@/content/services";
 
@@ -526,6 +526,154 @@ export const PLATFORMS: ServiceDetail[] = [
     cta: {
       title: "Ready to grow your Shopify store?",
       subtitle: "Book a call to scope your store build, migration, or back-office support.",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────── CRM, Sales & Marketing Automation
+  {
+    slug: "crm-sales-and-marketing-automation",
+    category: "Platform Services",
+    eyebrow: "Platform Service",
+    title: "CRM, Sales & Marketing Automation",
+    seoTitle: "CRM, Sales & Marketing Automation Services — Implementation & Integration",
+    metaDescription:
+      "KOV CRM and marketing automation services: implement and integrate Salesforce, HubSpot, and Dynamics to unify sales and marketing and automate the customer journey. Book a call.",
+    tagline:
+      "Unify sales and marketing on the right CRM and automation platform — implemented, integrated, and tuned to grow pipeline and revenue.",
+    answer:
+      "CRM, sales, and marketing automation services cover the selection, implementation, and integration of customer relationship management and marketing automation platforms — such as Salesforce, HubSpot, and Microsoft Dynamics — to align sales and marketing and automate the customer journey.",
+    overview: [
+      "Disconnected sales and marketing tools leak leads and hide the real picture of your pipeline. KOV implements and integrates the right CRM and marketing automation platform so the whole customer journey — from first touch to closed deal — runs on one connected system.",
+      "Whether you're on Salesforce, HubSpot, or Microsoft Dynamics, we configure the platform to your process, automate campaigns and workflows, and integrate it with your ERP and data so sales and marketing finally pull in the same direction.",
+    ],
+    stats: [
+      { value: "360°", label: "Customer view" },
+      { value: "Multi-platform", label: "Salesforce, HubSpot, Dynamics" },
+      { value: "Automation", label: "Journeys & workflows" },
+      { value: "Adoption", label: "Focused delivery" },
+    ],
+    capabilities: [
+      { title: "CRM Implementation", desc: "Configure CRM to your sales and service process.", icon: TrendingUp },
+      { title: "Marketing Automation", desc: "Journeys, lead nurturing, and campaign automation.", icon: Megaphone },
+      { title: "Lead Management", desc: "Capture, score, and route leads to sales.", icon: Workflow },
+      { title: "Sales Enablement", desc: "Pipeline, forecasting, and productivity tooling.", icon: BarChart3 },
+      { title: "Integration", desc: "Connect CRM to ERP, marketing, and data.", icon: Webhook },
+      { title: "Analytics", desc: "Attribution, funnel, and revenue reporting.", icon: Users },
+    ],
+    compare: {
+      title: "Disconnected tools vs KOV unified CRM & automation",
+      withLabel: "KOV CRM & Automation",
+      withoutLabel: "Disconnected point tools",
+      rows: [
+        { aspect: "Data", kov: "Single customer view", other: "Siloed, duplicated" },
+        { aspect: "Journey", kov: "Automated end to end", other: "Manual handoffs" },
+        { aspect: "Visibility", kov: "Full-funnel reporting", other: "Blind spots" },
+        { aspect: "Alignment", kov: "Sales & marketing unified", other: "Working apart" },
+        { aspect: "Adoption", kov: "Designed for usability", other: "Low adoption" },
+      ],
+    },
+    process: [
+      { title: "Discover", desc: "We map your sales and marketing processes and goals." },
+      { title: "Design & build", desc: "We select and configure the right platform for usability." },
+      { title: "Integrate", desc: "We connect CRM to ERP, marketing, and your data." },
+      { title: "Optimize", desc: "We drive adoption and tune for pipeline and revenue." },
+    ],
+    useCases: [
+      "Implementing or migrating a CRM platform",
+      "Adding marketing automation and lead nurturing",
+      "Unifying sales and marketing data",
+      "Integrating CRM with ERP and other systems",
+      "Improving pipeline visibility and forecasting",
+    ],
+    faqs: [
+      { q: "What is CRM and marketing automation?", a: "CRM manages customer relationships and sales; marketing automation runs campaigns and nurtures leads. Together they unify and automate the customer journey. KOV implements and integrates both." },
+      { q: "Which CRM platforms do you work with?", a: "We work across leading platforms including Salesforce, HubSpot, and Microsoft Dynamics, recommending the right fit for your needs, budget, and existing estate." },
+      { q: "Can you integrate CRM with our ERP?", a: "Yes. We integrate CRM and marketing platforms with ERP, finance, and data systems so customer and order data stays consistent." },
+      { q: "How do you improve CRM adoption?", a: "We design for usability, automate manual work, and provide training and change management so teams actually use the system." },
+      { q: "Do you provide ongoing support?", a: "Yes. We offer managed administration and continuous optimization to keep the platform healthy and improving." },
+    ],
+    related: [
+      { title: "Salesforce Services", href: "/platform-services/salesforce/" },
+      { title: "Microsoft Dynamics", href: "/platform-services/microsoft-dynamics/" },
+      { title: "Application Services", href: "/services/application-services/" },
+    ],
+    cta: {
+      title: "Unify sales and marketing.",
+      subtitle: "Book a call to scope your CRM and marketing automation project.",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────── ERP & Enterprise Systems
+  {
+    slug: "erp-and-enterprise-systems",
+    category: "Platform Services",
+    eyebrow: "Platform Service",
+    title: "ERP & Enterprise Systems",
+    seoTitle: "ERP & Enterprise Systems Services — Implementation & Integration",
+    metaDescription:
+      "KOV ERP and enterprise systems services: implement, migrate, and integrate SAP, Oracle, Microsoft Dynamics, and NetSuite. Certified consultants. Book a call.",
+    tagline:
+      "Choose, implement, and integrate the ERP that fits your business — SAP, Oracle, Dynamics, or NetSuite — delivered end to end.",
+    answer:
+      "ERP and enterprise systems services cover the selection, implementation, migration, and integration of enterprise resource planning platforms — including SAP, Oracle, Microsoft Dynamics, and NetSuite — that run core finance, supply chain, and operations.",
+    overview: [
+      "Your ERP is the backbone of finance, supply chain, and operations — and choosing and implementing it well is one of the highest-stakes technology decisions you'll make. KOV brings vendor-independent advice and certified delivery across the major ERP platforms.",
+      "From selecting the right ERP to implementing, migrating, and integrating it with the rest of your estate, we deliver enterprise systems that streamline operations and give leaders a single source of truth.",
+    ],
+    stats: [
+      { value: "4+", label: "ERP platforms" },
+      { value: "Vendor-independent", label: "Selection advice" },
+      { value: "End-to-end", label: "Select to support" },
+      { value: "24/7", label: "Support option" },
+    ],
+    capabilities: [
+      { title: "ERP Selection", desc: "Vendor-independent evaluation and selection.", icon: Workflow },
+      { title: "Implementation", desc: "Full ERP implementation and rollout.", icon: Boxes },
+      { title: "Migration & Upgrade", desc: "Move from legacy ERP to modern cloud ERP.", icon: RefreshCw },
+      { title: "Finance & Operations", desc: "Configure core finance, supply chain, and ops.", icon: Banknote },
+      { title: "Integration", desc: "Connect ERP to CRM, data, and third parties.", icon: Webhook },
+      { title: "Support", desc: "Managed ERP support and optimization.", icon: Database },
+    ],
+    compare: {
+      title: "Single-vendor SI vs KOV independent ERP practice",
+      withLabel: "KOV ERP Practice",
+      withoutLabel: "Single-vendor SI",
+      rows: [
+        { aspect: "Selection", kov: "Vendor-independent", other: "Pushes one product" },
+        { aspect: "Coverage", kov: "SAP, Oracle, Dynamics, NetSuite", other: "One platform" },
+        { aspect: "Delivery", kov: "Onshore + offshore blend", other: "Onshore only, costly" },
+        { aspect: "Integration", kov: "Whole-estate view", other: "Their product only" },
+        { aspect: "Support", kov: "Ongoing managed support", other: "Hands off at go-live" },
+      ],
+    },
+    process: [
+      { title: "Assess & select", desc: "We evaluate options and select the right ERP for you." },
+      { title: "Design", desc: "We design target processes and the implementation plan." },
+      { title: "Implement & migrate", desc: "We configure, migrate, and integrate with tested cutovers." },
+      { title: "Support", desc: "We provide hypercare and ongoing managed support." },
+    ],
+    useCases: [
+      "Selecting a new ERP platform",
+      "Implementing SAP, Oracle, Dynamics, or NetSuite",
+      "Migrating from legacy ERP to cloud ERP",
+      "Integrating ERP with CRM and other systems",
+      "Providing ongoing ERP support and optimization",
+    ],
+    faqs: [
+      { q: "What are ERP and enterprise systems services?", a: "They cover selecting, implementing, migrating, and integrating enterprise resource planning platforms — such as SAP, Oracle, Microsoft Dynamics, and NetSuite — that run core finance, supply chain, and operations." },
+      { q: "Which ERP is right for us?", a: "It depends on your size, industry, and processes. We provide vendor-independent selection advice across SAP, Oracle, Dynamics, and NetSuite to find the best fit." },
+      { q: "Can you migrate us from a legacy ERP?", a: "Yes. We plan and deliver migrations from legacy or on-premise ERP to modern cloud ERP with tested cutovers and minimal disruption." },
+      { q: "Do you integrate ERP with other systems?", a: "Yes. We integrate ERP with CRM, data platforms, and third-party systems so your estate works as one." },
+      { q: "Do you support the ERP after go-live?", a: "Yes. We provide hypercare and ongoing managed support, including 24/7 coverage for critical systems." },
+    ],
+    related: [
+      { title: "SAP Services", href: "/platform-services/sap/" },
+      { title: "Oracle Services", href: "/platform-services/oracle/" },
+      { title: "Advisory & Consulting", href: "/services/advisory/" },
+    ],
+    cta: {
+      title: "Get your ERP decision right.",
+      subtitle: "Book a call for vendor-independent ERP selection and delivery.",
     },
   },
 ];

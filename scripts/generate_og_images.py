@@ -71,6 +71,8 @@ SERVICES = [
     ("sap-permanent-staffing", "SAP STAFFING", "SAP Permanent Staffing", "Certified SAP professionals, permanent"),
     ("sap-flexi-staffing", "SAP STAFFING", "SAP Flexi Staffing", "Flexible SAP resourcing on demand"),
     ("sap-contract-staffing", "SAP STAFFING", "SAP Contract Staffing", "Certified SAP contractors, fast"),
+    ("crm-sales-and-marketing-automation", "PLATFORM SERVICE", "CRM & Marketing Automation", "Unify sales and marketing on one platform"),
+    ("erp-and-enterprise-systems", "PLATFORM SERVICE", "ERP & Enterprise Systems", "SAP, Oracle, Dynamics and NetSuite"),
 ]
 
 
