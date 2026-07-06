@@ -38,6 +38,16 @@ SERVICES = [
      "eProcurement, custom catalogs, warranty and renewals"),
     ("sap", "PLATFORM SERVICE", "SAP Services",
      "Implementation, migration, integration and staffing"),
+    ("oracle", "PLATFORM SERVICE", "Oracle Services",
+     "Fusion Cloud, NetSuite, EBS and Oracle Database"),
+    ("workday", "PLATFORM SERVICE", "Workday Services",
+     "HCM, Financials, Adaptive Planning and integrations"),
+    ("salesforce", "PLATFORM SERVICE", "Salesforce Services",
+     "Sales, Service, Marketing Cloud and CPQ"),
+    ("microsoft-dynamics", "PLATFORM SERVICE", "Microsoft Dynamics 365",
+     "Finance, Supply Chain, Sales and Business Central"),
+    ("servicenow", "PLATFORM SERVICE", "ServiceNow Services",
+     "ITSM, ITOM, HR Service Delivery and SecOps"),
 ]
 
 

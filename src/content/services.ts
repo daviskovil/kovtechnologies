@@ -10,7 +10,7 @@ import {
 
 export type Faq = { q: string; a: string };
 export type Stat = { value: string; label: string };
-export type Capability = { title: string; desc: string; icon: LucideIcon };
+export type Capability = { title: string; desc: string; icon: LucideIcon; href?: string };
 export type Step = { title: string; desc: string };
 export type CompareRow = { aspect: string; kov: string; other: string };
 export type Related = { title: string; href: string };

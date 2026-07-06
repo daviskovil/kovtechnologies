@@ -9,8 +9,11 @@ import type { ServiceDetail as Service } from "@/content/services";
 
 const SITE = "https://kovtechnologies.com";
 
-export function ServiceDetail({ service: s }: { service: Service }) {
-  const url = `${SITE}/services/${s.slug}/`;
+type Base = { label: string; href: string; path: string };
+const DEFAULT_BASE: Base = { label: "Services", href: "/services/", path: "/services" };
+
+export function ServiceDetail({ service: s, base = DEFAULT_BASE }: { service: Service; base?: Base }) {
+  const url = `${SITE}${base.path}/${s.slug}/`;
 
   const jsonLd = [
     {
@@ -32,7 +35,7 @@ export function ServiceDetail({ service: s }: { service: Service }) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services/` },
+        { "@type": "ListItem", position: 2, name: base.label, item: `${SITE}${base.href}` },
         { "@type": "ListItem", position: 3, name: s.title, item: url },
       ],
     },
@@ -57,7 +60,7 @@ export function ServiceDetail({ service: s }: { service: Service }) {
           <nav className="mb-6 text-sm text-slate">
             <Link href="/" className="hover:text-cobalt">Home</Link>
             <span className="mx-2 text-ink/30">/</span>
-            <Link href="/services/" className="hover:text-cobalt">Services</Link>
+            <Link href={base.href} className="hover:text-cobalt">{base.label}</Link>
             <span className="mx-2 text-ink/30">/</span>
             <span className="text-cobalt">{s.title}</span>
           </nav>
@@ -69,7 +72,7 @@ export function ServiceDetail({ service: s }: { service: Service }) {
             <p className="mt-6 text-lg leading-relaxed text-slate">{s.tagline}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/contact/" variant="cta" withArrow>Book a Call</Button>
-              <Button href="/services/" variant="outline">All Services</Button>
+              <Button href={base.href} variant="outline">All {base.label}</Button>
             </div>
           </div>
 
@@ -133,15 +136,38 @@ export function ServiceDetail({ service: s }: { service: Service }) {
             intro={`Everything you get with KOV ${s.title.toLowerCase()} — delivered as one accountable service.`}
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {s.capabilities.map((c) => (
-              <div key={c.title} className="rounded-2xl border border-ink/8 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-flame-50 text-flame">
-                  <c.icon className="h-5 w-5" />
-                </span>
-                <h3 className="mt-5 text-lg font-bold text-cobalt">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate">{c.desc}</p>
-              </div>
-            ))}
+            {s.capabilities.map((c) => {
+              const inner = (
+                <>
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-flame-50 text-flame">
+                    <c.icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-5 text-lg font-bold text-cobalt">{c.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate">{c.desc}</p>
+                  {c.href && (
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-flame">
+                      Explore <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </span>
+                  )}
+                </>
+              );
+              return c.href ? (
+                <Link
+                  key={c.title}
+                  href={c.href}
+                  className="group flex flex-col rounded-2xl border border-ink/8 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-cobalt/20 hover:shadow-lg"
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <div
+                  key={c.title}
+                  className="flex flex-col rounded-2xl border border-ink/8 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  {inner}
+                </div>
+              );
+            })}
           </div>
         </Container>
       </section>
