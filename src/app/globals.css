@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * KOV Technologies — design tokens (matched to the live site design)
+ * Cobalt blue + vivid orange, orange→coral CTA gradient, indigo accent.
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Brand blue */
+  --color-cobalt-50: #eef0ff;
+  --color-cobalt-100: #dfe2ff;
+  --color-cobalt-200: #c4c8ff;
+  --color-cobalt-300: #9fa4ff;
+  --color-cobalt-400: #7b7ef8;
+  --color-cobalt-500: #565aec;
+  --color-cobalt-600: #3b3ddb;
+  --color-cobalt-700: #2a2ac2;
+  --color-cobalt: #1e22b4;
+  --color-cobalt-900: #171a8f;
+  --color-navy: #14186f;
+
+  /* Accent orange */
+  --color-flame-50: #fff3ed;
+  --color-flame-100: #ffe1d0;
+  --color-flame-200: #ffbf9f;
+  --color-flame-300: #ff9764;
+  --color-flame-400: #ff7433;
+  --color-flame: #ff5a00;
+  --color-flame-600: #e64d00;
+
+  /* Indigo (nav CTA) */
+  --color-indigo-accent: #4f46e5;
+
+  /* Neutrals */
+  --color-ink: #0b0e1f;
+  --color-slate: #5b6172;
+  --color-mist: #f4f5fa;
+  --color-cloud: #eef0f7;
+  --color-paper: #ffffff;
+
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+
+  /* Fonts (injected by next/font in layout.tsx) */
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 1rem;
+}
+
+/* Gradients */
+:root {
+  --grad-cta: linear-gradient(135deg, #ff7a3d 0%, #f5425a 100%);
+  --grad-indigo: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  --grad-hero: radial-gradient(1200px 500px at 80% -10%, #dfe3ff 0%, rgba(223, 227, 255, 0) 60%),
+    linear-gradient(180deg, #eaecfb 0%, #f5f6fe 45%, #ffffff 100%);
+  --grad-dark: linear-gradient(135deg, #191d8f 0%, #262bb0 55%, #3138c9 100%);
+}
+
+* {
+  border-color: color-mix(in oklab, var(--color-ink) 10%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* ---- Reusable surface / helper classes ---- */
+.hero-gradient { background: var(--grad-hero); }
+.section-dark { background-image: var(--grad-dark); color: #fff; }
+.bg-cta { background-image: var(--grad-cta); }
+.bg-indigo-grad { background-image: var(--grad-indigo); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-flame);
+}
+
+.bg-dots {
+  background-image: radial-gradient(color-mix(in oklab, var(--color-cobalt) 14%, transparent) 1.4px, transparent 1.4px);
+  background-size: 22px 22px;
+}
+
+/* ---- Hero illustration motion ---- */
+@keyframes kov-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes kov-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.03); }
+}
+@keyframes kov-dash {
+  to { stroke-dashoffset: -80; }
+}
+@keyframes kov-spin-slow {
+  to { transform: rotate(360deg); }
+}
+.kov-float { animation: kov-float 6s ease-in-out infinite; }
+.kov-pulse { animation: kov-pulse 5s ease-in-out infinite; transform-origin: 260px 260px; }
+.kov-flow { stroke-dasharray: 6 10; animation: kov-dash 3s linear infinite; }
+.kov-spin-slow { animation: kov-spin-slow 60s linear infinite; transform-origin: 260px 260px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kov-float, .kov-pulse, .kov-flow, .kov-spin-slow { animation: none; }
+}
